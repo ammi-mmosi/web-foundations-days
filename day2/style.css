@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f2f4f8;
+}
+
+header {
+  background-color: #1f3a5f;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0 0 1rem;
+  opacity: 0.85;
+}
+
+/* Navigation bar (Flexbox, centred row) */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+}
+
+/*Centred main and white card sections */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main > h2 {
+  margin-top: 0;
+}
+
+section {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2,
+section h3 {
+  margin-top: 0;
+}
+
+#notes-list {
+  padding-left: 1.25rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #555;
+}
+
+/*Features list as a responsive card grid */
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.features li {
+  background-color: #eef3fb;
+  border: 1px solid #d3dff2;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Table and feedback form  */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #c8cdd6;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #1f3a5f;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f6f8fb;
+}
+
+form p {
+  margin: 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #b8c0cc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid #1f3a5f;
+  border-color: #1f3a5f;
+}
+
+button {
+  background-color: #1f3a5f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 1.4rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Hover effects with transitions */
+nav a {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: #fff;
+  color: #1f3a5f;
+}
+
+button {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2f5a94;
+  transform: translateY(-2px);
+}
+
+/* Small screens: smaller header text and padding*/
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0.75rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
